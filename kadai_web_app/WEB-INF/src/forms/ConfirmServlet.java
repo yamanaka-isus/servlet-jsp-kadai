@@ -19,16 +19,16 @@ public class ConfirmServlet extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		
 		// JSPからのリクエストデータ取得
-		String name = request.getParameter("user_name");
-		String email = request.getParameter("user_email");
-		String address = request.getParameter("user_address");
-		String number = request.getParameter("user_number");
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String address = request.getParameter("address");
+		String number = request.getParameter("phone_number");
 		
 		// リクエストスコープにデータ保存
 		request.setAttribute("name", name);
 		request.setAttribute("email", email);
  		request.setAttribute("address", address);
-		request.setAttribute("number", number);
+		request.setAttribute("phone_number", number);
 		
 		// データが存在しない場合は空文字に置き換え
 		name = Objects.toString(name, "");

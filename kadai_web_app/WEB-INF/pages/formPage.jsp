@@ -11,40 +11,40 @@
         String userName = (String) request.getAttribute("userName");
         String userEmail = (String) request.getAttribute("userEmail");
         String userAddress = (String) request.getAttribute("userAddress");
-        String userNumber = (String)  request.getAttribute("userNumber");
+        String phoneNumber = (String)  request.getAttribute("phoneNumber");
         
         // データが存在しない場合は空文字に置き換え
         userName = Objects.toString(userName, "");
         userEmail = Objects.toString(userEmail, "");
         userAddress = Objects.toString(userAddress, "");
-        userNumber = Objects.toString(userNumber, "");
+        phoneNumber = Objects.toString(phoneNumber, "");
         %>
         
         <h2>個人情報入力フォーム</h2>
         <form action="<%= request.getContextPath() %>/confirm" method="post">
             <table>
                 <tr>
-                    <td>お名前</td>
+                    <td>氏名</td>
                     <td>
-                        <input type="text" name="user_name" value=<%= userName %> >
+                        <input type="text" name="name" value=<%= userName %> >
                     </td>
                 </tr>
                 <tr>
                     <td>メールアドレス</td>
                     <td>
-                        <input type="text" name="user_email" value=<%= userEmail %> >
+                        <input type="text" name="email" value=<%= userEmail %> >
                     </td>
                 </tr>
                 <tr>
                     <td>住所</td>
                     <td>
-                        <input type="text" name="user_address" value=<%= userAddress %> >
+                        <input type="text" name="address" value=<%= userAddress %> >
                     </td>
                 </tr>
                 <tr>
                     <td>電話番号</td>
                     <td>
-                        <input type="text" name="user_number" value=<%= userNumber %> >
+                        <input type="text" name="phone_number" value=<%= phoneNumber %> >
                     </td>
                 </tr>
             </table>
